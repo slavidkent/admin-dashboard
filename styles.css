@@ -1,0 +1,76 @@
+:root {
+  --main-background-color: rgb(230, 230, 230);
+  --sidebar-background-color: linear-gradient(0deg, #a151a8,rgb(73, 151, 151));
+  --sidebar-background-color-hover: rgb(207, 201, 169);
+  --topbar-background-color: white;
+  --sidebar-text-color: white;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+/* =========side-bar============ */
+.side-bar {
+  background: var(--sidebar-background-color);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-content: start;
+  grid-auto-rows: auto;
+}
+/* turn icon and text white >>>>>>>>>>>> */
+.side-bar h1,
+.logo-container > img,
+.side-bar a {
+  color: black;
+  filter: invert(1);
+}
+/*<<<<<<<<<<<<<<< turn icon and text white */
+.logo-container {
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+}
+.logo-container > img {
+  width: 3rem;
+}
+.navigation-links {
+  display: grid;
+  grid-template: inherit;
+  gap: 2rem;
+}
+.navigation-links img {
+  width: 1.8rem;
+}
+.navigation-links a {
+  display: block;
+  font-size: 1.5rem;
+  padding: 0.6rem 0 0.6rem 1.5rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+.navigation-links a:hover {
+  background-color: var(--sidebar-background-color-hover);
+}
