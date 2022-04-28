@@ -6,24 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Dashboard</title>
   </head>
+
   <body class="container">
     <header class="side-bar">
       <div class="logo-container">
+        <img src="./icons/dashboard.svg" alt="dashboard svg" />
         <h1>Dashboard</h1>
       </div>
       <nav>
         <ul class="navigation-group-one">
-          <li>Home</li>
-          <li>Profile</li>
-          <li>Messages</li>
-          <li>History</li>
-          <li>Tasks</li>
-          <li>Communities</li>
+          <li>
+            <a href="#"><img src="./icons/home.svg" alt="home svg" /> Home</a>
+          </li>
+          <li>
+            <a href="#"><img src="./icons/profile.svg" alt="profile svg" /> Profile</a>
+          </li>
+          <li>
+            <a href="#"><img src="./icons/messages.svg" alt="message svg" /> Messages</a>
+          </li>
+          <li>
+            <a href="#"><img src="./icons/history.svg" alt="history svg" /> History</a>
+          </li>
+          <li>
+            <a href="#"><img src="./icons/tasks.svg" alt="task svg" /> Tasks</a>
+          </li>
+          <li>
+            <a href="#"><img src="./icons/communities.svg" alt="communities svg" /> Communities</a>
+          </li>
         </ul>
         <ul class="navigation-group-two">
-          <li>Setting</li>
-          <li>Support</li>
-          <li>Privacy</li>
+          <li>
+            <a href="#"><img src="./icons/settings.svg" alt="setting svg" /> Setting</a>
+          </li>
+          <li>
+            <a href="#"><img src="./icons/support.svg" alt="support svg" /> Support</a>
+          </li>
+          <li>
+            <a href="#"><img src="./icons/privacy.svg" alt="privacy svg" /> Privacy</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -31,9 +51,15 @@
     <main>
       <div class="top-bar">
         <div class="top-bar-top">
-          <button></button>
-          <input type="text" />
-          <button class="notification-btn"></button>
+          <form action="#" method="get">
+            <button class="search-btn">
+              <img src="./icons/search.svg" alt="search svg">
+            </button>
+            <input type="text" />
+          </form>
+          <button class="notification-btn">
+            <img src="./icons/notification.svg" alt="notification svg">
+          </button>
           <img class="profile-pic" src="" alt="" />
           <p class="profile-name">Kent</p>
         </div>
@@ -53,9 +79,7 @@
       <div class="content-container">
         <section class="project-section">
           <p>Your Projects</p>
-          <div >
-
-          </div>
+          <div></div>
         </section>
         <section class="announcements-section">
           <p>Announcements</p>
