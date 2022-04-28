@@ -1,8 +1,9 @@
 :root {
   --main-background-color: rgb(230, 230, 230);
-  --sidebar-background-color: linear-gradient(0deg, #a151a8,rgb(73, 151, 151));
+  --sidebar-background-color: linear-gradient(0deg, #a151a8, rgb(73, 151, 151));
   --sidebar-background-color-hover: rgb(207, 201, 169);
   --topbar-background-color: white;
+  --topbar-shadow: 0 0 10px hsla(0, 0%, 0%, 0.4);
   --sidebar-text-color: white;
 }
 * {
@@ -33,6 +34,7 @@ a {
   gap: 2rem;
   align-content: start;
   grid-auto-rows: auto;
+  z-index: 2;
 }
 /* turn icon and text white >>>>>>>>>>>> */
 .side-bar h1,
@@ -73,4 +75,20 @@ a {
 }
 .navigation-links a:hover {
   background-color: var(--sidebar-background-color-hover);
+}
+/* <<<<<<<<<<<< end of header section */
+
+/* =================main container section======================  */
+.main-container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background-color: var(--main-background-color);
+}
+/* =========top bar=========== */
+.top-bar {
+  background-color: var(--topbar-background-color);
+  box-shadow: var(--topbar-shadow);
+  display: grid;
+  grid-template-rows: auto 100px;
+  z-index: 1;
 }
