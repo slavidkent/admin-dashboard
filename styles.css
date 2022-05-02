@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 :root {
   --main-background-color: rgb(237, 237, 245);
   --sidebar-background-color: linear-gradient(0deg, hsl(295, 35%, 45%), hsl(180, 35%, 45%));
@@ -44,6 +45,7 @@ a {
   gap: 2rem;
   align-content: start;
   z-index: 2;
+  font-family: 'Times New Roman', Times, serif;
 }
 /* turn icon and text white >>>>>>>>>>>> */
 .side-bar h1,
@@ -93,6 +95,7 @@ a {
   display: grid;
   grid-template-rows: auto 1fr;
   background-color: var(--main-background-color);
+  font-family: 'Roboto', sans-serif;
 }
 /* =========top bar=========== */
 .top-bar {
@@ -130,7 +133,7 @@ a {
 .top-bar-top-left input {
   font-size: 1rem;
   padding: 0.5rem;
-  border-image:var(--box-side-border-color);
+  border-image: var(--box-side-border-color);
   border-image-slice: 1;
 }
 .top-bar-top-right {
@@ -217,11 +220,11 @@ a {
 .content-container {
   display: grid;
   height: 100%;
-  grid-template-columns: minmax(400px, 1fr) minmax(300px,350px);
+  grid-template-columns: minmax(400px, 1fr) minmax(300px, 350px);
   grid-template-rows: 1fr 1fr;
   padding: 1.5em;
   overflow-y: auto;
-  gap:2rem; 
+  gap: 2rem;
 }
 .content-container h2 {
   font-size: 1.5rem;
@@ -269,25 +272,25 @@ a {
   left: 0;
 }
 /* >>>>>>>announcement */
-.announcements-section{
+.announcements-section {
   grid-column: 2/-1;
-  grid-row:1/2;
+  grid-row: 1/2;
   display: grid;
   grid-template-rows: auto 1fr;
 }
-.announcements-box{
+.announcements-box {
   display: grid;
   align-content: space-between;
 }
 
 /* >>>>>>>>>>>trending */
-.trending-section{
+.trending-section {
   grid-column: 2/-1;
   grid-row: 2/3;
   display: grid;
   grid-template-rows: auto 1fr;
 }
-.trending-box{
+.trending-box {
   display: grid;
   align-content: space-between;
 }
@@ -309,7 +312,6 @@ a {
 }
 .user-box p:last-of-type {
   align-self: start;
-  font-weight: 200;
 }
 
 /* =======================end of content=========================== */
