@@ -223,8 +223,8 @@ a {
   display: grid;
   height: 100%;
   grid-template-columns: minmax(400px, 1fr) minmax(300px, 350px);
-  grid-template-rows: 1fr 1fr;
-  padding: 1.5em;
+  grid-template-rows: 350px 350px;
+  padding: 1.5rem;
   overflow-y: auto;
   gap: 2rem;
 }
@@ -282,6 +282,7 @@ a {
 .icons img{
   width: 1.5rem;
   margin-left: 0.5rem;
+  cursor: pointer;
 }
 /* >>>>>>>announcement */
 .announcements-section {
@@ -292,7 +293,9 @@ a {
 }
 .announcements-box {
   display: grid;
-  align-content: space-between;
+  align-content: center;
+  gap:0.5rem;
+  height: auto;
 }
 
 /* >>>>>>>>>>>trending */
@@ -305,6 +308,7 @@ a {
 .trending-box {
   display: grid;
   align-content: space-between;
+  gap:0.5rem;
 }
 .user-box {
   display: grid;
