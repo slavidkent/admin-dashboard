@@ -196,13 +196,15 @@ a {
 .top-bar-bottom-right button {
   font-size: 1rem;
   font-weight: bold;
-  padding: 0.6rem 2rem;
+  padding: 0.8rem;
+  width: 8rem;
   border: none;
   background: var(--button-background-color);
   color: var(--button-text-color);
   border-radius: 10rem;
   cursor: pointer;
   transition: all 200ms ease-in;
+  margin: 1rem;
 }
 .top-bar-bottom-right button:hover {
   transform: translateY(-2px);
@@ -246,6 +248,7 @@ a {
   padding: 1.6rem;
   box-shadow: var(--content-shadow);
 }
+
 /* >>>>project section */
 .project-section {
   grid-column: 1/2;
@@ -260,6 +263,7 @@ a {
 .project-box {
   position: relative;
   overflow: hidden;
+  display: grid;
 }
 .project-box > h3::before {
   content: '';
@@ -270,6 +274,14 @@ a {
   background: var(--box-side-border-color);
   top: 0;
   left: 0;
+}
+.icons {
+  align-self: end;
+  justify-self: end;
+}
+.icons img{
+  width: 1.5rem;
+  margin-left: 0.5rem;
 }
 /* >>>>>>>announcement */
 .announcements-section {
