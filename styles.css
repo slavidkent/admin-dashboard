@@ -1,12 +1,18 @@
 :root {
-  --main-background-color: rgb(230, 230, 230);
+  --main-background-color: rgb(237, 237, 245);
   --sidebar-background-color: linear-gradient(0deg, hsl(295, 35%, 45%), hsl(180, 35%, 45%));
   --sidebar-background-color-hover: rgb(207, 201, 169);
   --topbar-background-color: white;
   --button-background-color: linear-gradient(135deg, hsl(295, 60%, 60%) 1%, hsl(180, 60%, 60%) 99%);
-  --topbar-shadow: 0 0 10px hsla(0, 0%, 0%, 0.4);
+  --content-background-color: white;
+
+  --topbar-shadow: 0 2px 5px hsla(0, 0%, 0%, 0.2);
+  --content-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.2);
+
   --sidebar-text-color: white;
   --button-text-color: rgb(255, 255, 255);
+  --primary-text-color: black;
+  --secondary-text-color: rgb(100, 100, 100);
 }
 * {
   margin: 0;
@@ -26,16 +32,15 @@ a {
 .container {
   display: grid;
   grid-template-columns: 300px 1fr;
+  height: 100vh;
 }
 
 /* =========side-bar============ */
 .side-bar {
   background: var(--sidebar-background-color);
   display: grid;
-  grid-template-columns: 1fr;
   gap: 2rem;
   align-content: start;
-  grid-auto-rows: auto;
   z-index: 2;
 }
 /* turn icon and text white >>>>>>>>>>>> */
@@ -82,6 +87,7 @@ a {
 
 /* =================main container section======================  */
 .main-container {
+  height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr;
   background-color: var(--main-background-color);
@@ -146,7 +152,7 @@ a {
 .top-bar-bottom {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 7rem ;
+  grid-template-rows: 6rem;
 }
 .top-bar-bottom-left {
   display: grid;
@@ -165,11 +171,13 @@ a {
 .top-bar-bottom .profile-message {
   align-self: end;
   font-weight: bold;
+  padding-left: 0.2rem;
 }
 .top-bar-bottom .profile-name {
   align-self: start;
   font-size: 1.3rem;
   font-weight: bold;
+  padding-left: 0.2rem;
 }
 .top-bar-bottom-right {
   justify-self: center;
@@ -182,7 +190,7 @@ a {
 .top-bar-bottom-right button {
   font-size: 1rem;
   font-weight: bold;
-  padding: 0.8rem 2rem;
+  padding: 0.6rem 2rem;
   border: none;
   background: var(--button-background-color);
   color: var(--button-text-color);
@@ -190,14 +198,124 @@ a {
   cursor: pointer;
   transition: all 200ms ease-in;
 }
-.top-bar-bottom-right button:hover{
+.top-bar-bottom-right button:hover {
   transform: translateY(-2px);
   filter: brightness(108%);
 }
-.top-bar-bottom-right button:active{
+.top-bar-bottom-right button:active {
   transform: translateY(0px);
   filter: brightness(90%);
 }
 /* ================end of top bar====================== */
 
-/* =====================================content================================== */
+
+
+/* ==================================content=============================== */
+.content-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(400px, 1fr) 400px;
+  padding: 1rem;
+  gap: 2rem;
+}
+.content-container h2 {
+  font-size: 1.5rem;
+  color: var(--primary-text-color);
+}
+.content-container h3 {
+  font-size: 1.2rem;
+  color: var(--primary-text-color);
+}
+.content-container p {
+  color: var(--secondary-text-color);
+}
+.wrapper {
+  border: none;
+  background-color: var(--content-background-color);
+  border-radius: 0.8rem;
+  padding: 2.5rem;
+  box-shadow: var(--content-shadow);
+}
+.wrapper hr {
+  margin: 1rem 0;
+}
+
+/* >>>>project section */
+.project-section {
+  display: grid;
+  grid-template-rows: 2.5rem auto;
+  height: 100%;
+  padding: 1rem;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+/* =====side==== */
+.content-side {
+  
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.2rem;
+  padding:1rem;
+}
+/* >>>>>>>announcement */
+.announcements-section {
+  grid-column: 2/-1;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-rows: 2.5rem auto;
+}
+.announcements-box h3 {
+  font-size: 1rem;
+}
+.announcements-box {
+  display: grid;
+  align-content: space-between;
+  font-size: 0.9rem;
+}
+
+/* >>>>>>>>>>>trending */
+.trending-section {
+  /* width: 100%;
+  height: 100%; */
+  grid-column: 2/-1;
+  grid-row: 2/-1;
+  display: grid;
+  grid-template-rows: 2.5rem auto;
+}
+.trending-box {
+  padding: 1.5rem;
+  display: grid;
+  align-items: center;
+  align-content: space-between;
+}
+.user-box {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  grid-template-rows: 1.5rem 1fr;
+  align-items: center;
+}
+.user-box img {
+  grid-area: 1 / 1 / span 2/ 2;
+  width: 3rem;
+  border-radius: 50%;
+}
+.user-box p {
+  padding-left: 1rem;
+}
+.user-box p:first-of-type {
+  align-self: end;
+  color: var(--primary-text-color);
+}
+.user-box p:last-of-type {
+  align-self: start;
+  font-weight: 200;
+  /* color: var(--secondary-text-color); */
+}
+
+/* =======================end of content=========================== */
